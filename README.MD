@@ -22,4 +22,4 @@ Note: You need `Node.js` and `npm` installed on your machine.
 # How to preview the build
 
 `npm run preview`
-s
+
