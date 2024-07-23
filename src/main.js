@@ -25,8 +25,32 @@ k.scene("main", async () => {
         k.scale(scaleFactor)])
 
     const player = k.make([ 
-        k.sprite("spritesheet", {anim: "idle-"})
-    ])  
+        k.sprite("spritesheet", {anim: "idle-down" }), 
+        k.area({ 
+            shape: new k.Rect(k.vex2(0, 3), 10, 10),
+        }), 
+        k.body(),
+        k.anchor("center"), 
+        k.pos(), 
+        k.scale(scaleFactor), 
+        {
+            speed: 250, 
+            direction: "down", 
+            isInDialog: false, 
+        },
+        "player", 
+
+
+    ]);  
+
+    for(const layer of layers){ 
+        if(layer.name === "boundaries"){ 
+            for(const boundaries of layer.objects){  
+                map.add([])
+
+            }
+        }
+    }
 
 
     }); 
