@@ -36,7 +36,7 @@ k.scene("main", async () => {
         {
             speed: 250, 
             direction: "down", 
-            isInDialog: false, 
+            isInDialogue: false, 
         },
         "player", 
 
@@ -46,8 +46,21 @@ k.scene("main", async () => {
     for(const layer of layers){ 
         if(layer.name === "boundaries"){ 
             for(const boundaries of layer.objects){  
-                map.add([])
+                map.add([
+                    k.area({
+                        shape: new k.Rect(vec2(0), boundary.width, boundary.height),
+                    }), 
+                    k.body({ isStatic: true}), 
+                    k.pos(boundary.x, boundary.y), 
+                    boundary.name, 
+                ]);
 
+                if(boundary.name){
+                    player.onCollide(boundary.name, () => { 
+                        player.isInDialogue = true;  
+                        // TODO 
+                    });
+                }
             }
         }
     }
