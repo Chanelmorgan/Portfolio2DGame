@@ -1,8 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: "/Portfolio2DGame/",
+  base: '/Portfolio2DGame/', // Ensure this matches your repository name
   build: {
-    minify: "terser",
+    outDir: 'dist', // Ensure this matches the publish_dir in your GitHub Actions
+    minify: 'terser',
   },
 });
