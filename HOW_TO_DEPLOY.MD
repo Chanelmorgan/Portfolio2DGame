@@ -1,8 +1,6 @@
 # How to deploy the project (on GitHub pages)
 
-There are 2 methods.
-
-## Method 1: Using Github Actions
+## Method: Using Github Actions
 
 1. Update `vite.config.js` base property to match the name of the repository. For example, `base: "/2d-portfolio-kaboom"`
 
@@ -12,8 +10,3 @@ There are 2 methods.
 
 4. The portfolio should now be live and accessible through GitHub pages.
 
-## Method 2: Using Another Repository
-
-1. Run `npm run build`.
-2. Take the resulting content of the `dist` folder and put it in a new GitHub repository.
-3. Activate GitHub pages in your new repository's settings.
